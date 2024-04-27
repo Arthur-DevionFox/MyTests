@@ -1,7 +1,44 @@
 import {encoded, translations} from './data.js'
 
+const translation = () => {
+
+    const decode = encoded.map((item, id) => {
+        let decoded = {}
+
+
+        for (const key in item) {
+            if (key.endsWith('Id'))  {
+                switch (item[key]) {
+                    case 'groupId': {
+                        decoded[key] = item[key]
+                    }
+                    case 'service': {
+                        decoded[key] = decoded[key]
+                    }
+                    case 'formatSize': {
+                        decoded[key] = decoded[key]
+                    }
+                    case 'ca': {
+                        decoded[key] = decoded[key]
+                    }
+                    default: {
+                        decoded[key] = translations[item[key]] || item[key]
+                    }
+                }
+                console.log(decoded)
+            } else {
+                decoded[key] = item[key]
+                console.log(decoded)
+            }
+        }
+    })
+}
+
+translation()
+
 console.log("Let's rock")
-console.log(encoded, translations)
+console.log("ROCK AND STONE!")
+//console.log(encoded, translations)
 
 
 
