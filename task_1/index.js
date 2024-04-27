@@ -13,13 +13,13 @@ const translation = () => {
                         decoded[key] = item[key]
                     }
                     case 'service': {
-                        decoded[key] = decoded[key]
+                        decoded[key] = item[key]
                     }
                     case 'formatSize': {
-                        decoded[key] = decoded[key]
+                        decoded[key] = item[key]
                     }
                     case 'ca': {
-                        decoded[key] = decoded[key]
+                        decoded[key] = item[key]
                     }
                     default: {
                         decoded[key] = translations[item[key]] || item[key]
