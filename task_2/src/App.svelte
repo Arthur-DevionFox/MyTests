@@ -109,9 +109,9 @@
       const apiUrl: string = `https://v6.exchangerate-api.com/v6/${apiKey}/codes`;
       fetchedCurrencies(apiUrl)
               .then(data => {
-                if (data && data.conversion_rates) {
-                  allCurrencies = data.conversion_rates;
-                  sessionStorage.setItem('allCurrencies', JSON.stringify(data.conversion_rates));
+                if (data && data.supported_codes) {
+                  allCurrencies = data.supported_codes;
+                  sessionStorage.setItem('allCurrencies', JSON.stringify(data.supported_codes));
                 }
                 conversion();
               })
