@@ -6,9 +6,6 @@ const translation = () => {
     let decoded = {}
 
     const decode = encoded.map((item, id) => {
-
-
-
         for (const key in item) {
             if (key.endsWith('Id'))  {
                 switch (item[key]) {
@@ -32,7 +29,6 @@ const translation = () => {
                         decoded[key] = translations[item[key]] || item[key]
                     }
                 }
-
             } else {
                 decoded[key] = item[key]
             }
@@ -40,7 +36,6 @@ const translation = () => {
         uniqueId.push(item.groupId)
         console.log(decoded)
     })
-
     console.log(uniqueId)
 }
 
