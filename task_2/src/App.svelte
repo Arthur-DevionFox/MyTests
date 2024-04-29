@@ -128,7 +128,7 @@
     <h1 class="title">Конвертер валют</h1>
     <div class="currency">
       <fieldset class="fieldset">
-        <select class="selector" name={firstFieldName} bind:value = {currencySecond} on:change={changeCurrency}>
+        <select class="selector" name={firstFieldName} bind:value = {currencyFirst} on:change={changeCurrency}>
           {#each allCurrencies as currency}
             <option value={currency[0]}>
               {currency[1]}
